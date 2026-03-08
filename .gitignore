@@ -22,7 +22,6 @@ data/reports/
 *.csv
 
 # Models (use MLflow/DVC)
-models/
 *.pkl
 *.pt
 *.bin
