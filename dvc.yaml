@@ -1,0 +1,38 @@
+stages:
+  download_nhanes:
+    cmd: python scripts/download_nhanes.py
+    outs:
+      - data/raw/nhanes_biochemistry.xpt
+      - data/raw/nhanes_vitamins.xpt
+      - data/raw/nhanes_iron.xpt
+      - data/raw/nhanes_demographics.xpt
+      - data/raw/nhanes_cbc.xpt
+
+  process_nhanes:
+    cmd: python src/ml/deficiency_classifier.py --stage process
+    deps:
+      - data/raw/nhanes_biochemistry.xpt
+      - data/raw/nhanes_vitamins.xpt
+      - src/ml/deficiency_classifier.py
+    outs:
+      - data/processed/nhanes_features.parquet
+
+  train_model:
+    cmd: python src/ml/deficiency_classifier.py --stage train
+    deps:
+      - data/processed/nhanes_features.parquet
+      - src/ml/deficiency_classifier.py
+    outs:
+      - models/deficiency_classifier/models.pkl
+      - models/deficiency_classifier/explainers.pkl
+    metrics:
+      - models/deficiency_classifier/metrics.json:
+          cache: false
+
+  build_vector_store:
+    cmd: python scripts/build_vector_store.py
+    outs:
+      - vector_store/chroma
+
+  build_knowledge_graph:
+    cmd: python scripts/build_knowledge_graph.py

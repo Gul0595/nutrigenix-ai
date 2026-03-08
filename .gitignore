@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+*.env
+
+# Data (use DVC to track these)
+data/raw/
+data/processed/
+data/reports/
+*.xpt
+*.parquet
+*.csv
+
+# Models (use MLflow/DVC)
+models/
+*.pkl
+*.pt
+*.bin
+*.safetensors
+
+# Vector store (regenerate with build_vector_store.py)
+vector_store/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+
+# MLflow runs
+mlruns/
+mlflow.db
+
+# Temp
+/tmp/
+*.tmp

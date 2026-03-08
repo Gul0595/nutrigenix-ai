@@ -1,0 +1,32 @@
+# Core
+python-dotenv
+pydantic
+loguru
+
+# PDF processing
+pymupdf
+pdfplumber
+pytesseract
+pillow
+
+# ML
+scikit-learn
+xgboost
+shap
+pandas
+numpy
+
+# API
+fastapi
+uvicorn[standard]
+python-multipart
+httpx
+
+# UI
+streamlit
+
+# Utilities
+requests
+biopython
+tqdm
+mlflow
