@@ -7,7 +7,7 @@ loguru
 pymupdf
 pdfplumber
 pytesseract
-pillow
+pillow==10.4.0
 
 # ML
 scikit-learn
@@ -23,7 +23,7 @@ python-multipart
 httpx
 
 # UI
-streamlit==1.33.0
+streamlit==1.36.0
 
 # Utilities
 requests
