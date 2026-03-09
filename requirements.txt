@@ -30,3 +30,4 @@ requests
 biopython
 tqdm
 mlflow
+altair==4.2.2
