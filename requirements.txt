@@ -1,29 +1,7 @@
-# Core
-python-dotenv
-pydantic
-loguru
-
-# PDF processing
-pymupdf
-pdfplumber
-pytesseract
-pillow==10.4.0
-
-# ML
-pandas
-numpy
-
-# API
-fastapi
-uvicorn[standard]
-python-multipart
-httpx
-
-# UI
 streamlit==1.36.0
-
-# Utilities
 requests
-biopython
-tqdm
+pandas
+pdfplumber
+pymupdf
+pillow==10.4.0
 altair==4.2.2
