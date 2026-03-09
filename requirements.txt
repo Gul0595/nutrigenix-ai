@@ -10,9 +10,6 @@ pytesseract
 pillow==10.4.0
 
 # ML
-scikit-learn
-xgboost
-shap
 pandas
 numpy
 
@@ -29,5 +26,4 @@ streamlit==1.36.0
 requests
 biopython
 tqdm
-mlflow
 altair==4.2.2
