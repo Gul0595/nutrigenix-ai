@@ -5,3 +5,4 @@ pdfplumber
 pymupdf
 pillow==10.4.0
 altair==4.2.2
+imghdr
