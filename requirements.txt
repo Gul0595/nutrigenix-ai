@@ -23,7 +23,7 @@ python-multipart
 httpx
 
 # UI
-streamlit
+streamlit==1.33.0
 
 # Utilities
 requests
